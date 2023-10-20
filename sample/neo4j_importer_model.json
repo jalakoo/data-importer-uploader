@@ -1,0 +1,616 @@
+{
+  "version": "0.7.1",
+  "graph": {
+    "nodes": [
+      {
+        "id": "n0",
+        "position": {
+          "x": -173.2454312585944,
+          "y": 57.024747798848125
+        },
+        "caption": "Person"
+      },
+      {
+        "id": "n4",
+        "position": {
+          "x": 365.3012694454993,
+          "y": 210.7077534174155
+        },
+        "caption": "Event"
+      },
+      {
+        "id": "n5",
+        "position": {
+          "x": 76.76509232208146,
+          "y": 220.0471159464404
+        },
+        "caption": "City"
+      },
+      {
+        "id": "n8",
+        "position": {
+          "x": -173.2454312585944,
+          "y": 364.39075903598285
+        },
+        "caption": "Person"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "n4",
+        "type": "SPEAKING_AT",
+        "fromId": "n0",
+        "toId": "n4"
+      },
+      {
+        "id": "n7",
+        "type": "IN",
+        "fromId": "n4",
+        "toId": "n5"
+      },
+      {
+        "id": "n18",
+        "type": "LIVES_IN",
+        "fromId": "n0",
+        "toId": "n5"
+      },
+      {
+        "id": "n19",
+        "type": "SPEAKING_AT",
+        "fromId": "n8",
+        "toId": "n4"
+      },
+      {
+        "id": "n20",
+        "type": "LIVES_IN",
+        "fromId": "n8",
+        "toId": "n5"
+      }
+    ]
+  },
+  "dataModel": {
+    "fileModel": {
+      "fileSchemas": {
+        "person_n0.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "first_name",
+              "type": "String",
+              "sample": "Kimberly",
+              "include": true
+            },
+            {
+              "name": "last_name",
+              "type": "String",
+              "sample": "Connor",
+              "include": true
+            },
+            {
+              "name": "_uid",
+              "type": "String",
+              "sample": "fc8c01d0-f2a1-4ca3-92f7-8e0a597d4b2b",
+              "include": true
+            }
+          ]
+        },
+        "event_n4.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "name",
+              "type": "String",
+              "sample": "facilis qui",
+              "include": true
+            },
+            {
+              "name": "_uid",
+              "type": "String",
+              "sample": "8b0a97a3-be30-4fb0-85c6-37073b016624",
+              "include": true
+            }
+          ]
+        },
+        "city_n5.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "name",
+              "type": "String",
+              "sample": "Evansburgh",
+              "include": true
+            },
+            {
+              "name": "_uid",
+              "type": "String",
+              "sample": "0cbdcc75-6688-41f0-950d-0ab19ec1bc74",
+              "include": true
+            }
+          ]
+        },
+        "person_n8.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "first_name",
+              "type": "String",
+              "sample": "Kayla",
+              "include": true
+            },
+            {
+              "name": "last_name",
+              "type": "String",
+              "sample": "Denise",
+              "include": true
+            },
+            {
+              "name": "email",
+              "type": "Function",
+              "sample": "{'reference': ['first_name']}.{'reference': ['last_name']}@email.com",
+              "include": true
+            },
+            {
+              "name": "_uid",
+              "type": "String",
+              "sample": "d5a3b388-99b9-4d6e-9856-7764eecd39e9",
+              "include": true
+            }
+          ]
+        },
+        "person_speaking_at_event_n4.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "_uid",
+              "type": "String",
+              "sample": "5f3f8016-7b52-433c-b05d-81405984d33c",
+              "include": true
+            },
+            {
+              "name": "_from__uid",
+              "type": "String",
+              "sample": "841aaf23-5d0b-40f9-954d-045538686365",
+              "include": true
+            },
+            {
+              "name": "_to__uid",
+              "type": "String",
+              "sample": "f6c5eaf2-e259-49ec-be76-588946ef14f2",
+              "include": true
+            }
+          ]
+        },
+        "event_in_city_n7.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "_uid",
+              "type": "String",
+              "sample": "2af951a9-e9cd-4b59-9d49-be0b4ab5a484",
+              "include": true
+            },
+            {
+              "name": "_from__uid",
+              "type": "String",
+              "sample": "b35e6549-ef93-4aed-ba2c-090bff2022b0",
+              "include": true
+            },
+            {
+              "name": "_to__uid",
+              "type": "String",
+              "sample": "7d7b1b70-1939-4dad-a45e-bc9b40ddb95e",
+              "include": true
+            }
+          ]
+        },
+        "person_lives_in_city_n18.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "_uid",
+              "type": "String",
+              "sample": "2b6d4147-6256-4d1d-bc58-9526253ed724",
+              "include": true
+            },
+            {
+              "name": "_from__uid",
+              "type": "String",
+              "sample": "15cb5f50-71fb-41ab-9b59-800b2fa9e4c3",
+              "include": true
+            },
+            {
+              "name": "_to__uid",
+              "type": "String",
+              "sample": "42e1cabd-640c-4702-b80d-e36f685274ae",
+              "include": true
+            }
+          ]
+        },
+        "person_speaking_at_event_n19.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "_uid",
+              "type": "String",
+              "sample": "8bab81e4-4ce8-41d9-a250-3679b40c3782",
+              "include": true
+            },
+            {
+              "name": "_from__uid",
+              "type": "String",
+              "sample": "2b46a3c1-f48d-4035-95db-daf1222b618f",
+              "include": true
+            },
+            {
+              "name": "_to__uid",
+              "type": "String",
+              "sample": "3420e606-59f9-4952-846a-704eae624b9d",
+              "include": true
+            }
+          ]
+        },
+        "person_lives_in_city_n20.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "_uid",
+              "type": "String",
+              "sample": "bb9b2efb-a8fe-49a6-9b35-ccf69653d98f",
+              "include": true
+            },
+            {
+              "name": "_from__uid",
+              "type": "String",
+              "sample": "77e57a6f-72d1-4cee-8d4c-66a458abcd47",
+              "include": true
+            },
+            {
+              "name": "_to__uid",
+              "type": "String",
+              "sample": "8c235c6d-821c-457c-8f21-3f75d0df6a50",
+              "include": true
+            }
+          ]
+        }
+      }
+    },
+    "graphModel": {
+      "nodeSchemas": {
+        "n0": {
+          "label": "Person",
+          "additionLabels": [
+            "Speaker"
+          ],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "first_name",
+              "type": "string",
+              "identifier": "first_name"
+            },
+            {
+              "property": "last_name",
+              "type": "string",
+              "identifier": "last_name"
+            },
+            {
+              "property": "_uid",
+              "type": "string",
+              "identifier": "_uid"
+            }
+          ],
+          "key": {
+            "properties": [
+              "_uid"
+            ],
+            "name": ""
+          }
+        },
+        "n4": {
+          "label": "Event",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "name",
+              "type": "string",
+              "identifier": "name"
+            },
+            {
+              "property": "_uid",
+              "type": "string",
+              "identifier": "_uid"
+            }
+          ],
+          "key": {
+            "properties": [
+              "_uid"
+            ],
+            "name": ""
+          }
+        },
+        "n5": {
+          "label": "City",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "name",
+              "type": "string",
+              "identifier": "name"
+            },
+            {
+              "property": "_uid",
+              "type": "string",
+              "identifier": "_uid"
+            }
+          ],
+          "key": {
+            "properties": [
+              "_uid"
+            ],
+            "name": ""
+          }
+        },
+        "n8": {
+          "label": "Person",
+          "additionLabels": [
+            "Attendee"
+          ],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "first_name",
+              "type": "string",
+              "identifier": "first_name"
+            },
+            {
+              "property": "last_name",
+              "type": "string",
+              "identifier": "last_name"
+            },
+            {
+              "property": "email",
+              "type": "function",
+              "identifier": "email"
+            },
+            {
+              "property": "_uid",
+              "type": "string",
+              "identifier": "_uid"
+            }
+          ],
+          "key": {
+            "properties": [
+              "_uid"
+            ],
+            "name": ""
+          }
+        }
+      },
+      "relationshipSchemas": {
+        "n4": {
+          "type": "SPEAKING_AT",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n4",
+          "properties": [
+            {
+              "property": "_uid",
+              "type": "string",
+              "identifier": "_uid"
+            }
+          ]
+        },
+        "n7": {
+          "type": "IN",
+          "sourceNodeSchema": "n4",
+          "targetNodeSchema": "n5",
+          "properties": [
+            {
+              "property": "_uid",
+              "type": "string",
+              "identifier": "_uid"
+            }
+          ]
+        },
+        "n18": {
+          "type": "LIVES_IN",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n5",
+          "properties": [
+            {
+              "property": "_uid",
+              "type": "string",
+              "identifier": "_uid"
+            }
+          ]
+        },
+        "n19": {
+          "type": "SPEAKING_AT",
+          "sourceNodeSchema": "n8",
+          "targetNodeSchema": "n4",
+          "properties": [
+            {
+              "property": "_uid",
+              "type": "string",
+              "identifier": "_uid"
+            }
+          ]
+        },
+        "n20": {
+          "type": "LIVES_IN",
+          "sourceNodeSchema": "n8",
+          "targetNodeSchema": "n5",
+          "properties": [
+            {
+              "property": "_uid",
+              "type": "string",
+              "identifier": "_uid"
+            }
+          ]
+        }
+      }
+    },
+    "mappingModel": {
+      "nodeMappings": {
+        "n0": {
+          "fileSchema": "person_n0.csv",
+          "nodeSchema": "n0",
+          "mappings": [
+            {
+              "field": "first_name"
+            },
+            {
+              "field": "last_name"
+            },
+            {
+              "field": "_uid"
+            }
+          ]
+        },
+        "n4": {
+          "fileSchema": "event_n4.csv",
+          "nodeSchema": "n4",
+          "mappings": [
+            {
+              "field": "name"
+            },
+            {
+              "field": "_uid"
+            }
+          ]
+        },
+        "n5": {
+          "fileSchema": "city_n5.csv",
+          "nodeSchema": "n5",
+          "mappings": [
+            {
+              "field": "name"
+            },
+            {
+              "field": "_uid"
+            }
+          ]
+        },
+        "n8": {
+          "fileSchema": "person_n8.csv",
+          "nodeSchema": "n8",
+          "mappings": [
+            {
+              "field": "first_name"
+            },
+            {
+              "field": "last_name"
+            },
+            {
+              "field": "email"
+            },
+            {
+              "field": "_uid"
+            }
+          ]
+        }
+      },
+      "relationshipMappings": {
+        "n4": {
+          "relationshipSchema": "n4",
+          "mappings": [
+            {
+              "field": "_uid"
+            }
+          ],
+          "sourceMappings": [
+            {
+              "field": "_from__uid"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "_to__uid"
+            }
+          ],
+          "fileSchema": "person_speaking_at_event_n4.csv"
+        },
+        "n7": {
+          "relationshipSchema": "n7",
+          "mappings": [
+            {
+              "field": "_uid"
+            }
+          ],
+          "sourceMappings": [
+            {
+              "field": "_from__uid"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "_to__uid"
+            }
+          ],
+          "fileSchema": "event_in_city_n7.csv"
+        },
+        "n18": {
+          "relationshipSchema": "n18",
+          "mappings": [
+            {
+              "field": "_uid"
+            }
+          ],
+          "sourceMappings": [
+            {
+              "field": "_from__uid"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "_to__uid"
+            }
+          ],
+          "fileSchema": "person_lives_in_city_n18.csv"
+        },
+        "n19": {
+          "relationshipSchema": "n19",
+          "mappings": [
+            {
+              "field": "_uid"
+            }
+          ],
+          "sourceMappings": [
+            {
+              "field": "_from__uid"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "_to__uid"
+            }
+          ],
+          "fileSchema": "person_speaking_at_event_n19.csv"
+        },
+        "n20": {
+          "relationshipSchema": "n20",
+          "mappings": [
+            {
+              "field": "_uid"
+            }
+          ],
+          "sourceMappings": [
+            {
+              "field": "_from__uid"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "_to__uid"
+            }
+          ],
+          "fileSchema": "person_lives_in_city_n20.csv"
+        }
+      }
+    },
+    "configuration": {
+      "idsToIgnore": []
+    }
+  }
+}

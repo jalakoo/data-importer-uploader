@@ -50,7 +50,8 @@ def upload(
     # TODO: Reset Neo4j if requested
     if reset_before_upload:
         reset(*neo4_creds)
-        
+
+    # TODO: Sort .csvs by nodes first - using mapping data for this. See the mappingModel: nodeMappings and relationshipMappings key-values
     # TODO: Run load to upload each .csv file
 
     # TODO: Smoke test that the data was uploaded?
